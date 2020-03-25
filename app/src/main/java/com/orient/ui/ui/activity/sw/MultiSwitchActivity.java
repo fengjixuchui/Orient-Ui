@@ -3,6 +3,7 @@ package com.orient.ui.ui.activity.sw;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -71,6 +72,7 @@ public class MultiSwitchActivity extends BaseActivity {
         });
 
         mSwitch.setItemsArray(new String[]{"Android", "Ios", "Java"});
+        mSwitch.setCurrentItem(2);
         mSwitch.setMultiSwitchListener(new MultiSwitchListener() {
             @Override
             public void onPositionSelected(int pos) {
@@ -82,6 +84,7 @@ public class MultiSwitchActivity extends BaseActivity {
                 Log.e(TAG, "位置:" + pos + ",百分比：" + percent);
             }
         });
+
 
         mIconSwitch.setIconArray(new int[]{R.drawable.grid_ic_play, R.drawable.ic_camera, R.drawable.common_ic_back});
 
